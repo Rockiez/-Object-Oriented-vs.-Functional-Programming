@@ -5,7 +5,7 @@
 举一个压缩文件算法的例子。我们会让用户选择使用zip还是gzip算法来压缩文件，并实现通用的Compressor类来使用相应的算法。
 首先，我们需要定义策略的API（见 Figure 3-2），命名为CompressionStrategy。每个压缩算法都会实现这个接口。它们有一个参数和返回值都为OutputStream实例的compress方法。其中返回的OutputStream对象是输入的压缩后版本。（见Example 3-9）
 
-![](CHAPTER%203%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/3AC1D462-0723-4581-ACDF-7922AD491226.png)
+![](2.png)
 _Figure 3-2 策略模式_
 
 _Example 3-9 定义压缩数据用的策略接口_
