@@ -490,6 +490,102 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x547D;&#x4EE4;&#x6A21;&#x5F0F;">&#x547D;&#x4EE4;&#x6A21;&#x5F0F;</h1>
+<p><em>&#x547D;&#x4EE4;&#x5BF9;&#x8C61;</em>&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x8BE5;&#x5BF9;&#x8C61;&#x5C01;&#x88C5;&#x4E86;&#x4EE5;&#x540E;&#x4EE5;&#x540E;&#x8C03;&#x7528;&#x53E6;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x6240;&#x9700;&#x8981;&#x6240;&#x6709;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x547D;&#x4EE4;&#x6A21;&#x5F0F;&#x5229;&#x7528;&#x8BE5;&#x5BF9;&#x8C61;&#xFF0C; <em>&#x65E8;&#x5728;&#x7F16;&#x5199;&#x57FA;&#x4E8E;&#x8FD0;&#x884C;&#x65F6;&#x51B3;&#x7B56;&#x7684;&#x5E8F;&#x5217;&#x4E0E;&#x6267;&#x884C;&#x65B9;&#x6CD5;&#x7684;&#x901A;&#x7528;&#x4EE3;&#x7801;</em> &#x3002;&#x547D;&#x4EE4;&#x6A21;&#x5F0F;&#x7531;&#x56DB;&#x4E2A;&#x7C7B;&#x578B;&#x7EC4;&#x6210;&#xFF0C;&#x5982;Figure 3-1&#x6240;&#x793A;&#xFF1A;</p>
+<ul>
+<li><em>Receiver</em>
+&#x6267;&#x884C;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x3002;</li>
+<li><em>Command</em>
+&#x5C01;&#x88C5;&#x6240;&#x6709;&#x8BF7;&#x6C42;&#x8C03;&#x7528;Receiver&#x7684;&#x4FE1;&#x606F;&#x3002;</li>
+<li><em>Invoker</em>
+&#x63A7;&#x5236;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x6307;&#x4EE4;&#x7684;&#x987A;&#x5E8F;&#x548C;&#x6267;&#x884C;&#x3002;</li>
+<li><em>Client</em>
+&#x521B;&#x5EFA;&#x5177;&#x4F53;&#x7684;&#x6307;&#x4EE4;&#x5B9E;&#x4F8B;&#x3002;</li>
+</ul>
+<p><img src="CHAPTER%203%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/0EB300F3-D910-46A1-AE93-96CCB6972FAC.png" alt="">
+<em>Figure 3-1. &#x547D;&#x4EE4;&#x6A21;&#x5F0F;</em></p>
+<p>&#x89C2;&#x5BDF;&#x547D;&#x4EE4;&#x6A21;&#x5F0F;&#x7684;&#x5177;&#x4F53;&#x4F8B;&#x5B50;&#x5E76;&#x6CE8;&#x610F;&#x5B83;&#x662F;&#x5982;&#x4F55;&#x5229;&#x7528;lambda&#x8868;&#x8FBE;&#x5F0F;&#x8FDB;&#x884C;&#x6539;&#x8FDB;&#x7684;&#x3002;&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x6709;&#x4E00;&#x4E2A;&#x56FE;&#x5F62;&#x754C;&#x9762;&#x7684;&#x7F16;&#x8F91;&#x5668;&#x7EC4;&#x4EF6;&#xFF0C;&#x5F53;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x64CD;&#x4F5C;&#x65F6;&#x4F1A;&#x901A;&#x77E5;&#x6211;&#x4EEC;&#xFF0C;&#x6BD4;&#x5982;<strong>open</strong>&#x6216;&#x8005;<strong>save</strong>&#xFF0C;&#x5982;Example 3-1&#x6240;&#x793A;&#x3002;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x5B9E;&#x73B0;&#x5B8F;&#x529F;&#x80FD;&#x2014;&#x2014;&#x5B83;&#x53EF;&#x4EE5;&#x8BB0;&#x5F55;&#x4E00;&#x7EC4;&#x64CD;&#x4F5C;&#x5C01;&#x88C5;&#x4E3A;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x64CD;&#x4F5C;&#x4F9B;&#x4EE5;&#x540E;&#x8FD0;&#x884C;&#x3002;&#x8FD9;&#x5C31;&#x662F;receiver&#x3002;
+<em>Example 3-1. &#x4E00;&#x4E2A;&#x6587;&#x5B57;&#x7F16;&#x8F91;&#x5668;&#x4F1A;&#x6709;&#x7684;&#x901A;&#x7528;&#x51FD;&#x6570;</em></p>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Editor</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">save</span><span class="hljs-params">()</span></span>;
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">open</span><span class="hljs-params">()</span></span>;
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">close</span><span class="hljs-params">()</span></span>;
+}
+</code></pre>
+<p>&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;&#xFF0C;&#x6BD4;&#x5982;<strong>open</strong>&#x6216;&#x8005;<strong>save</strong>&#x90FD;&#x662F;&#x6307;&#x4EE4;&#x3002; &#x6211;&#x4EEC;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x901A;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x63A5;&#x53E3;&#x53BB;&#x63A5;&#x53D7;&#x4E0D;&#x540C;&#x64CD;&#x4F5C;&#x3002;&#x6211;&#x628A;&#x8FD9;&#x4E2A;&#x63A5;&#x53E3;&#x79F0;&#x4E3A;<strong>Action</strong>&#xFF0C;&#x5B83;&#x63CF;&#x8FF0;&#x4E86;&#x5728;&#x533A;&#x57DF;&#x5185;&#x6267;&#x884C;&#x5355;&#x4E00;&#x64CD;&#x4F5C;&#x3002;&#x6240;&#x6709;&#x547D;&#x4EE4;&#x5BF9;&#x8C61;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x7684;&#x63A5;&#x53E3;&#x5982;&#x4E0B;&#xFF08;Example 3-2&#xFF09;&#x3002;</p>
+<p><em>Example 3-2.  &#x6240;&#x6709;actions&#x90FD;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x7684;Action&#x63A5;&#x53E3;</em></p>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Action</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">perform</span><span class="hljs-params">()</span></span>;
+}
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x53EF;&#x4EE5;&#x4E3A;&#x6BCF;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;&#x5B9E;&#x73B0;<strong>Action</strong>&#x63A5;&#x53E3;&#x4E86;&#x3002;&#x8FD9;&#x4E9B;&#x7C7B;&#x90FD;&#x9700;&#x8981;&#x5728;&#x6211;&#x4EEC;&#x7684;Editor&#x4E0A;&#x8C03;&#x7528;&#x5355;&#x4E00;&#x65B9;&#x6CD5;&#x5E76;&#x5C06;&#x8BE5;&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x5C01;&#x88C5;<strong>Action</strong>&#x63A5;&#x53E3;&#x4E2D;&#x3002;&#x5728;&#x5C01;&#x88C5;&#x64CD;&#x4F5C;&#x4E4B;&#x540E;&#xFF0C;&#x7528;&#x5408;&#x9002;&#x7684;&#x7C7B;&#x578B;&#x547D;&#x540D;&#x60EF;&#x4F8B;&#x6765;&#x547D;&#x540D;&#x8FD9;&#x4E9B;&#x7C7B;&#x2014;&#x2014;&#x6240;&#x4EE5;&#xFF0C;&#x4E0E;save&#x65B9;&#x6CD5;&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#x7C7B;&#x662F;Save&#x3002;Example 3-3 &#x548C; Example 3-4 &#x662F;&#x6211;&#x4EEC;&#x7684;&#x547D;&#x4EE4;&#x5BF9;&#x8C61;&#x3002;</p>
+<p><em>Example 3-3 &#x5C06;save&#x64CD;&#x4F5C;&#x59D4;&#x6258;&#x7ED9;&#x7F16;&#x8F91;&#x5668;&#x5E95;&#x5C42;&#x7684;&#x65B9;&#x6CD5;&#x8C03;&#x7528;</em></p>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Save</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Action</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Editor editor;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Save</span><span class="hljs-params">(Editor editor)</span> </span>{
+        <span class="hljs-keyword">this</span>.editor = editor;
+    }
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">perform</span><span class="hljs-params">()</span> </span>{
+        editor.save();
+    }
+}
+</code></pre>
+<p><em>Example 3-4 &#x5C06;open&#x64CD;&#x4F5C;&#x59D4;&#x6258;&#x7ED9;&#x7F16;&#x8F91;&#x5668;&#x5E95;&#x5C42;&#x7684;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x3002;</em></p>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Open</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Action</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Editor editor;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Open</span><span class="hljs-params">(Editor editor)</span> </span>{
+        <span class="hljs-keyword">this</span>.editor = editor;
+    }
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">perform</span><span class="hljs-params">()</span> </span>{
+        editor.open();
+    }
+}
+</code></pre>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;Macro&#x7C7B;&#x4E86;&#x3002;&#x8BE5;&#x7C7B;&#x53EF;&#x4EE5;record&#x64CD;&#x4F5C;&#xFF0C;&#x5E76;&#x4F5C;&#x4E3A;group&#x8FD0;&#x884C;&#x3002;&#x6211;&#x4EEC;&#x4F7F;&#x7528;List&#x6765;&#x5B58;&#x50A8;&#x4E00;&#x7EC4;&#x64CD;&#x4F5C;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;ForEach&#x65B9;&#x6CD5;&#x4F9D;&#x6B21;&#x6267;&#x884C;&#x6BCF;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;Example 3-5 &#x5B9E;&#x73B0;&#x4E86;invoker&#x3002;</p>
+<p><em>Example 3-5 &#x4E00;&#x4E2A;&#x7531;&#x4E00;&#x7EC4;&#x53EF;&#x4EE5;&#x4F9D;&#x6B21;&#x8C03;&#x7528;&#x7684;&#x64CD;&#x4F5C;&#x7EC4;&#x6210;&#x7684;&#x5B8F;</em></p>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Macro</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> List&lt;Action&gt; actions;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Macro</span><span class="hljs-params">()</span> </span>{
+        actions = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+      }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">record</span><span class="hljs-params">(Action action)</span> </span>{
+        actions.add(action);
+      }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+        actions.forEach(Action::perform);
+      }
+}
+</code></pre>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x7528;&#x4EE3;&#x7801;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x5B8F;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x6DFB;&#x52A0;&#x4E86;&#x6BCF;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x5B83;&#x4EEC;&#x90FD;&#x88AB;&#x8BB0;&#x5F55;&#x5230; Macro &#x5BF9;&#x8C61;&#x4E2D;&#x3002;&#x6211;&#x4EEC;&#x7ACB;&#x5373;&#x8FD0;&#x884C;&#x8BE5;&#x5B8F;&#xFF0C;&#x5B83;&#x4F1A;&#x4F9D;&#x6B21;&#x8C03;&#x7528;&#x6BCF;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x3002;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x61D2;&#x764C;&#x7A0B;&#x5E8F;&#x5458;&#xFF0C;&#x6211;&#x559C;&#x6B22;&#x4F7F;&#x7528;&#x5B8F;&#x5B9A;&#x4E49;&#x547D;&#x4EE4;&#x5DE5;&#x4F5C;&#x6D41;&#x3002;&#x6211;&#x8BF4;&#x4E86;&#x201C;&#x61D2;&#xFF1F;&#x201D;&#x6211;&#x7684;&#x610F;&#x601D;&#x662F;&#x4E13;&#x6CE8;&#x4E8E;&#x63D0;&#x9AD8;&#x751F;&#x4EA7;&#x529B;&#x3002;<strong>Macro</strong>&#x5BF9;&#x8C61;&#x662F;&#x6211;&#x4EEC;&#x7684;client&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5982;Example 3-6 &#x6240;&#x793A;&#x3002;</p>
+<p><em>Example 3-6 &#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x6A21;&#x5F0F;&#x6784;&#x5EFA;&#x5B8F;</em></p>
+<pre><code class="lang-java">Macro macro = <span class="hljs-keyword">new</span> Macro();
+macro.record(<span class="hljs-keyword">new</span> Open(editor));
+macro.record(<span class="hljs-keyword">new</span> Save(editor));
+macro.record(<span class="hljs-keyword">new</span> Close(editor));
+macro.run();
+</code></pre>
+<p>lambda&#x8868;&#x8FBE;&#x5F0F;&#x6709;&#x4EC0;&#x4E48;&#x5E2E;&#x52A9;&#xFF1F;&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x547D;&#x4EE4;&#x7C7B;&#xFF0C;&#x6BD4;&#x5982;Save&#x548C;Open&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x5229;&#x7528;lambda&#x8868;&#x8FBE;&#x5F0F;&#x5265;&#x79BB;&#x5B83;&#x4EEC;&#x7684;&#x5916;&#x58F3;&#x3002;&#x5B83;&#x4EEC;&#x662F;&#x4E3A;&#x4E86;&#x4F20;&#x9012;&#x800C;&#x521B;&#x5EFA;&#x7684;&#x7C7B;&#x7684;&#x884C;&#x4E3A;&#x5757;&#x3002;&#x6574;&#x4E2A;&#x6A21;&#x5F0F;&#x4F1A;&#x56E0;&#x4E3A;&#x4F7F;&#x7528;lambda&#x8868;&#x8FBE;&#x5F0F;&#x53EF;&#x4EE5;&#x5B8C;&#x5168;&#x629B;&#x5F00;&#x8FD9;&#x4E9B;&#x7C7B;&#x800C;&#x53D8;&#x5F97;&#x5F88;&#x7B80;&#x5355;&#x3002;Example 3-7 &#x5C55;&#x793A;&#x4E86;Macro&#x7C7B;&#x5982;&#x4F55;&#x4F7F;&#x7528;lambda&#x8868;&#x8FBE;&#x5F0F;&#x6765;&#x4EE3;&#x66FF;&#x8FD9;&#x4E9B;&#x547D;&#x4EE4;&#x7C7B;&#x3002;</p>
+<p><em>Example 3-7 &#x4F7F;&#x7528;lambda&#x8868;&#x8FBE;&#x5F0F;&#x6765;&#x6784;&#x5EFA;&#x5B8F;</em></p>
+<pre><code class="lang-java">Macro macro = <span class="hljs-keyword">new</span> Macro();
+macro.record(() -&gt; editor.open());
+macro.record(() -&gt; editor.save());
+macro.record(() -&gt; editor.close());
+macro.run();
+</code></pre>
+<p>&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x6211;&#x4EEC;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x505A;&#x7684;&#x66F4;&#x597D;&#xFF0C;  &#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x6BCF;&#x4E2A;lambda&#x8868;&#x8FBE;&#x5F0F;&#x90FD;&#x6267;&#x884C;&#x5355;&#x4E00;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x5F15;&#x7528;&#xFF0C;&#x5C06;&#x7F16;&#x8F91;&#x5668;&#x6307;&#x4EE4;&#x53D1;&#x9001;&#x5230;&#x5B8F;&#x5BF9;&#x8C61;&#x3002;&#xFF08;&#x89C1;Example 3-8&#xFF09;1</p>
+<p><em>Example 3-8 &#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x5F15;&#x7528;&#x6765;&#x6784;&#x5EFA;&#x5B8F;</em></p>
+<pre><code class="lang-java">Macro macro = <span class="hljs-keyword">new</span> Macro();
+macro.record(editor::open);
+macro.record(editor::save);
+macro.record(editor::close);
+macro.run();
+</code></pre>
+<p><em>&#x547D;&#x4EE4;&#x6A21;&#x5F0F;&#x53EA;&#x662F;&#x7F29;&#x6C34;&#x7248;&#x7684;lambda&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x5F00;&#x59CB;</em> &#x3002;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x5B9E;&#x9645;&#x7684;lambda&#x8868;&#x8FBE;&#x5F0F;&#x6216;&#x8005;&#x65B9;&#x6CD5;&#x5F15;&#x7528;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6E05;&#x7406;&#x4EE3;&#x7801;&#xFF0C;&#x51CF;&#x5C11;&#x5927;&#x91CF;&#x9700;&#x8981;&#x7684;&#x6A21;&#x7248;&#x5E76;&#x4F7F;&#x5F97;&#x4EE3;&#x7801;&#x7684;&#x76EE;&#x7684;&#x66F4;&#x52A0;&#x660E;&#x786E;&#x3002;
+&#x5B8F;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x6A21;&#x5F0F;&#x7684;&#x4F8B;&#x5B50;&#x3002;&#x5B83;&#x7ECF;&#x5E38;&#x88AB;&#x7528;&#x5728;&#x57FA;&#x4E8E;&#x7EC4;&#x4EF6;&#x5B9E;&#x73B0;&#x7684;GUI&#x7CFB;&#x7EDF;&#xFF0C;&#x4ECE;&#x800C;&#x907F;&#x514D;&#x4E86;&#x51FD;&#x6570;&#xFF0C;&#x7EBF;&#x7A0B;&#x6C60;&#xFF0C;&#x6570;&#x636E;&#x5904;&#x7406;&#x548C;&#x5411;&#x5BFC;&#x3002;</p>
+<blockquote>
+<p>core Java&#x4E2D;&#x5DF2;&#x7ECF;&#x6709;&#x4E00;&#x4E2A;&#x4E0E;Action&#x7ED3;&#x6784;&#x76F8;&#x540C;&#x7684;&#x51FD;&#x6570;&#x63A5;&#x53E3;&#x2014;&#x2014;Runnable&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x5B8F;&#x7C7B;&#x4E2D;&#x9009;&#x62E9;&#x4F7F;&#x7528;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x8BE5;&#x4F8B;&#x4E2D;&#xFF0C;&#x8003;&#x8651;&#x4F7F;&#x7528;Action&#x4F5C;&#x4E3A;&#x6211;&#x4EEC;&#x57DF;&#x4E2D;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x5E76;&#x521B;&#x9020;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x7684;&#x63A5;&#x53E3;&#x4F1A;&#x66F4;&#x52A0;&#x5408;&#x9002;&#x3002;  </p>
+</blockquote>
 
                                 
                                 </section>
@@ -533,7 +629,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"命令模式","level":"1.5.2","depth":2,"next":{"title":"策略模式","level":"1.5.3","depth":2,"path":"chapter3/section3.3.md","ref":"chapter3/section3.3.md","articles":[]},"previous":{"title":"函数式设计模式","level":"1.5.1","depth":2,"path":"chapter3/section3.1.md","ref":"chapter3/section3.1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/section3.2.md","mtime":"2017-03-28T07:21:05.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-28T07:34:08.253Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"命令模式","level":"1.5.2","depth":2,"next":{"title":"策略模式","level":"1.5.3","depth":2,"path":"chapter3/section3.3.md","ref":"chapter3/section3.3.md","articles":[]},"previous":{"title":"函数式设计模式","level":"1.5.1","depth":2,"path":"chapter3/section3.1.md","ref":"chapter3/section3.1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/section3.2.md","mtime":"2017-03-28T10:53:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-28T07:34:08.253Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

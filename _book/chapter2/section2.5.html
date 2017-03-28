@@ -490,6 +490,55 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x63A5;&#x53E3;&#x9694;&#x79BB;&#x539F;&#x5219;">&#x63A5;&#x53E3;&#x9694;&#x79BB;&#x539F;&#x5219;</h1>
+<p><em>&#x4E00;&#x4E2A;&#x7C7B;&#x5BF9;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x4F9D;&#x8D56;&#x662F;&#x5EFA;&#x7ACB;&#x5728;&#x6700;&#x5C0F;&#x7684;&#x63A5;&#x53E3;&#x4E0A;&#x3002;</em>
+&#x4E3A;&#x4E86;&#x6B63;&#x786E;&#x7684;&#x7406;&#x89E3;&#x63A5;&#x53E3;&#x9694;&#x79BB;&#x539F;&#x5219;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x8003;&#x8651;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x6211;&#x4EEC;&#x6709;&#x4E00;&#x4E2A;&#x767D;&#x5929;&#x5728;&#x5DE5;&#x5382;&#x5DE5;&#x4F5C;&#xFF0C;&#x665A;&#x4E0A;&#x56DE;&#x5BB6;&#x7684;&#x4EBA;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x6211;&#x4EEC;&#x7684;&#x5DE5;&#x4EBA;&#x63A5;&#x53E3;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><em>Example 2-8. &#x89E3;&#x6790;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x6807;&#x9898;</em></p>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Worker</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">goHome</span><span class="hljs-params">()</span></span>;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">work</span><span class="hljs-params">()</span></span>;
+}
+</code></pre>
+<p>&#x8D77;&#x521D;&#x6211;&#x4EEC;&#x7684;<strong>AssemblyLine</strong>&#x9700;&#x8981;&#x4E24;&#x79CD;&#x7C7B;&#x578B;&#x7684;<strong>Worker</strong>&#xFF1A;&#x4E00;&#x4E2A;<strong>AssemblyWorker</strong>&#x548C;&#x4E00;&#x4E2A;<strong>Manager</strong>&#x3002;&#x5B83;&#x4EEC;&#x90FD;&#x5728;&#x665A;&#x4E0A;&#x56DE;&#x5BB6;&#xFF0C;&#x4F46;&#x6839;&#x636E;&#x5B83;&#x4EEC;&#x6240;&#x505A;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5DE5;&#x4F5C;&#x65B9;&#x6CD5;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x5B9E;&#x73B0;&#x3002;
+&#x968F;&#x7740;&#x65F6;&#x95F4;&#x6D41;&#x901D;&#xFF0C;&#x65E0;&#x8BBA;&#x4EE5;&#x4F55;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x5DE5;&#x5382;&#x5F00;&#x59CB;&#x73B0;&#x4EE3;&#x5316;&#xFF0C;&#x5B83;&#x4EEC;&#x5F00;&#x59CB;&#x5F15;&#x5165;&#x673A;&#x5668;&#x4EBA;&#x3002;&#x6211;&#x4EEC;&#x7684;&#x673A;&#x5668;&#x4EBA;&#x4E5F;&#x9700;&#x8981;&#x5728;&#x5DE5;&#x5382;&#x4E2D;&#x5DE5;&#x4F5C;&#xFF0C;&#x4F46;&#x5B83;&#x4EEC;&#x5728;&#x767D;&#x5929;&#x7ED3;&#x675F;&#x65F6;&#x4E0D;&#x56DE;&#x5BB6;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6211;&#x4EEC;&#x7684;worker&#x63A5;&#x53E3;&#x4E0D;&#x9002;&#x7528;ISP&#xFF0C;&#x9664;&#x975E;<strong>goHome()</strong>&#x65B9;&#x6CD5;&#x4E0D;&#x662F;&#x6700;&#x5C0F;&#x63A5;&#x53E3;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;
+&#x73B0;&#x5728;&#x5173;&#x4E8E;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x7684;&#x6709;&#x8DA3;&#x7684;&#x4E00;&#x70B9;&#x662F;&#x8FD9;&#x4E00;&#x5207;&#x90FD;&#x6D89;&#x53CA;&#x5230;&#x5B50;&#x7C7B;&#x578B;&#x3002;&#x5927;&#x591A;&#x6570;&#x9759;&#x6001;&#x7C7B;&#x578B;&#x7684;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x8BED;&#x8A00;&#xFF0C;&#x6BD4;&#x5982;Java&#x548C;C++&#xFF0C;&#x6709;&#x6240;&#x8C13;&#x7684;&#x540D;&#x4E49;&#x5B50;&#x7C7B;&#x578B;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;<strong>Foo</strong>&#x7C7B;&#x6269;&#x5C55;&#x81EA;<strong>Bar</strong>&#x7C7B;&#x65F6;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5728;&#x4F60;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#x770B;&#x5230;<strong>Foo extends Bar</strong>&#x3002;&#x8FD9;&#x4E2A;&#x5173;&#x7CFB;&#x65F6;&#x660E;&#x786E;&#x7684;&#xFF0C;&#x5E76;&#x5EFA;&#x7ACB;&#x4E8E;&#x7C7B;&#x7684;&#x540D;&#x79F0;&#x3002;&#x8FD9;&#x540C;&#x6837;&#x9002;&#x7528;&#x63A5;&#x53E3;&#x548C;&#x7C7B;&#x3002;&#x5728;&#x6211;&#x4EEC;&#x7684;&#x5DE5;&#x4F5C;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C; &#x6211;&#x4EEC;&#x6709;&#x7C7B;&#x4F3C; Example 2-9 &#x7684;&#x4EE3;&#x7801;&#x53BB;&#x8BA9;&#x6211;&#x4EEC;&#x7684;&#x7F16;&#x8BD1;&#x5668;&#x4E86;&#x89E3;&#x7C7B;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#x3002;</p>
+<p><em>Example 2-9. &#x89E3;&#x6790;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x6807;&#x9898;</em></p>
+<pre><code class="lang-java">    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AssemblyWorker</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Worker</span>
+    <span class="hljs-title">class</span> <span class="hljs-title">Manager</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Worker</span>
+    <span class="hljs-title">class</span> <span class="hljs-title">Robot</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Worker</span>
+</span></code></pre>
+<p>&#x5F53;&#x7F16;&#x8BD1;&#x5668;&#x7F16;&#x8BD1;&#x5668;&#x68C0;&#x67E5;&#x4E00;&#x4E2A;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#x7684;&#x53C2;&#x6570;&#x53D8;&#x91CF;&#x65F6;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x8BC6;&#x522B;&#x7236;&#x7C7B;&#x578B;&#x4E3A;Worker&#xFF0C;&#x5E76;&#x6839;&#x636E;&#x8FD9;&#x4E9B;&#x660E;&#x786E;&#x7684;&#x547D;&#x540D;&#x5173;&#x7CFB;&#x8FDB;&#x884C;&#x68C0;&#x67E5;&#x3002;&#x5982;Example 2-10&#x6240;&#x793A;&#x3002;</p>
+<p><em>Example 2-10.  &#x89E3;&#x6790;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x6807;&#x9898;</em></p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addWorker</span><span class="hljs-params">(Worker worker)</span> </span>{
+        workers.add(worker);
+}
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> AssemblyLine <span class="hljs-title">newLine</span><span class="hljs-params">()</span> </span>{
+        AssemblyLine line = <span class="hljs-keyword">new</span> AssemblyLine();
+        line.addWorker(<span class="hljs-keyword">new</span> Manager());
+        line.addWorker(<span class="hljs-keyword">new</span> AssemblyWorker());
+        line.addWorker(<span class="hljs-keyword">new</span> Robot());
+        <span class="hljs-keyword">return</span> line;
+}
+</code></pre>
+<p>&#x66FF;&#x4EE3;&#x65B9;&#x6CD5;&#x79F0;&#x4E3A;&#x7ED3;&#x6784;&#x5B50;&#x7C7B;&#x578B;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;&#x9690;&#x542B;&#x5173;&#x7CFB;&#x662F;&#x57FA;&#x4E8E;shape/structure&#x7C7B;&#x578B;&#x7684;&#x4E4B;&#x95F4;&#x3002;&#x5982;&#x679C;&#x4F60;&#x5728;&#x53D8;&#x91CF;&#x4E0A;&#x8C03;&#x7528;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;<strong>getFoo()</strong> &#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x90A3;&#x4E48;&#x90A3;&#x4E2A;&#x53D8;&#x91CF;&#x53EA;&#x9700;&#x8981;&#x4E00;&#x4E2A;<strong>getFoo</strong>&#x65B9;&#x6CD5;&#xFF1B;&#x5B83;&#x4E0D;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x6216;&#x8005;&#x6269;&#x5C55;&#x81EA;&#x5176;&#x4ED6;&#x7684;&#x7C7B;&#x3002;&#x4F60;&#x5728;&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;&#x6216;&#x8005;&#x5728;&#x7C7B;&#x4F3C;C++&#x6A21;&#x7248;&#x6846;&#x67B6;&#x4E2D;&#x7CFB;&#x7EDF;&#x4E2D;&#x770B;&#x5230;&#x5F88;&#x591A;&#x3002;&#x50CF;Ruby&#x548C;Python&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x9E2D;&#x5B50;&#x7C7B;&#x578B;&#x5C31;&#x662F;&#x7ED3;&#x6784;&#x5B50;&#x7C7B;&#x7684;&#x52A8;&#x6001;&#x7C7B;&#x578B;&#x53D8;&#x4F53;&#x3002;
+&#x5982;&#x679C;&#x6211;&#x4EEC;&#x8003;&#x8651;&#x5047;&#x8BBE;&#x8BED;&#x8A00;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;&#x7ED3;&#x6784;&#x5B50;&#x7C7B;&#x578B;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x4F8B;&#x5B50;&#x4F1A;&#x88AB;&#x91CD;&#x5199;&#x4E3A;Example 2-11&#x8FD9;&#x6837;&#x3002;</p>
+<p><em>Example 2-11.   &#x89E3;&#x6790;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x6807;&#x9898;</em></p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StructuralWorker</span> {</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">work</span><span class="hljs-params">(<span class="hljs-symbol">step:</span>ProductionStep)</span></span> {
+        println(<span class="hljs-string">&quot;I&apos;m working on: &quot;</span> + step.getName)
+  }
+}
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">addWorker</span><span class="hljs-params">(worker)</span></span> {
+    workers += worker
+}
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">newLine</span><span class="hljs-params">()</span></span> = {
+    val line = new AssemblyLine
+    line.addWorker(new Manager())
+     line.addWorker(new StructuralWorker())
+    line.addWorker(new Robot())
+    line
+}
+</code></pre>
+<p>&#x7531;&#x4E8E;&#x5B83;&#x53BB;&#x9664;&#x4E86;&#x8FD9;&#x4E9B;&#x63A5;&#x53E3;&#x7684;&#x663E;&#x6027;&#x6027;&#x8D28;&#xFF0C;&#x7ED3;&#x6784;&#x5B50;&#x7C7B;&#x578B;&#x4E0D;&#x518D;&#x9700;&#x8981;&#x63A5;&#x53E3;&#x9694;&#x79BB;&#x539F;&#x5219;&#x3002;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x53C2;&#x6570;&#xFF0C;&#x7F16;&#x8BD1;&#x5668;&#x5C31;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x63A8;&#x65AD;&#x51FA;&#x6700;&#x5C0F;&#x5316;&#x7684;&#x63A5;&#x53E3;&#x3002;</p>
 
                                 
                                 </section>
@@ -533,7 +582,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"接口隔离原则","level":"1.4.5","depth":2,"next":{"title":"依赖反转原则","level":"1.4.6","depth":2,"path":"chapter2/section2.6.md","ref":"chapter2/section2.6.md","articles":[]},"previous":{"title":"里氏替换原则","level":"1.4.4","depth":2,"path":"chapter2/section2.4.md","ref":"chapter2/section2.4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/section2.5.md","mtime":"2017-03-28T07:21:05.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-28T07:34:08.253Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"接口隔离原则","level":"1.4.5","depth":2,"next":{"title":"依赖反转原则","level":"1.4.6","depth":2,"path":"chapter2/section2.6.md","ref":"chapter2/section2.6.md","articles":[]},"previous":{"title":"里氏替换原则","level":"1.4.4","depth":2,"path":"chapter2/section2.4.md","ref":"chapter2/section2.4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/section2.5.md","mtime":"2017-03-28T10:53:54.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-28T07:34:08.253Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

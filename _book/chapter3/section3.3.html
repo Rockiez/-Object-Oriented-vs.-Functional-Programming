@@ -490,6 +490,63 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x7B56;&#x7565;&#x6A21;&#x5F0F;">&#x7B56;&#x7565;&#x6A21;&#x5F0F;</h1>
+<p>&#x7B56;&#x7565;&#x6A21;&#x5F0F;&#x662F;&#x57FA;&#x4E8E;&#x8FD0;&#x884C;&#x65F6;&#x51B3;&#x7B56;&#x7684;&#x8F6F;&#x4EF6;&#x6539;&#x53D8;&#x7B97;&#x6CD5;&#x884C;&#x4E3A;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x6839;&#x636E;&#x4F60;&#x7684;&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#x51B3;&#x5B9A;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x7B56;&#x7565;&#x6A21;&#x5F0F;&#xFF0C;&#x4F46;&#x767E;&#x53D8;&#x4E0D;&#x79BB;&#x5176;&#x5B97;&#xFF0C;&#x5176;&#x4E3B;&#x8981;&#x7406;&#x5FF5;&#x662F;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x80FD;&#x901A;&#x7528;&#x4E3B;&#x9898;&#xFF0C;&#x5B83;&#x80FD;&#x88AB;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x7B97;&#x6CD5;&#x89E3;&#x51B3;&#xFF0C;&#x5E76;&#x5C06;&#x6240;&#x6709;&#x7684;&#x7B97;&#x6CD5;&#x62BD;&#x8C61;&#x4E3A;&#x540C;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x63A5;&#x53E3;&#x3002;
+&#x4E3E;&#x4E00;&#x4E2A;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x7B97;&#x6CD5;&#x7684;&#x4F8B;&#x5B50;&#x3002;&#x6211;&#x4EEC;&#x4F1A;&#x8BA9;&#x7528;&#x6237;&#x9009;&#x62E9;&#x4F7F;&#x7528;zip&#x8FD8;&#x662F;gzip&#x7B97;&#x6CD5;&#x6765;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x5B9E;&#x73B0;&#x901A;&#x7528;&#x7684;Compressor&#x7C7B;&#x6765;&#x4F7F;&#x7528;&#x76F8;&#x5E94;&#x7684;&#x7B97;&#x6CD5;&#x3002;
+&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x7B56;&#x7565;&#x7684;API&#xFF08;&#x89C1; Figure 3-2&#xFF09;&#xFF0C;&#x547D;&#x540D;&#x4E3A;CompressionStrategy&#x3002;&#x6BCF;&#x4E2A;&#x538B;&#x7F29;&#x7B97;&#x6CD5;&#x90FD;&#x4F1A;&#x5B9E;&#x73B0;&#x8FD9;&#x4E2A;&#x63A5;&#x53E3;&#x3002;&#x5B83;&#x4EEC;&#x6709;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x548C;&#x8FD4;&#x56DE;&#x503C;&#x90FD;&#x4E3A;OutputStream&#x5B9E;&#x4F8B;&#x7684;compress&#x65B9;&#x6CD5;&#x3002;&#x5176;&#x4E2D;&#x8FD4;&#x56DE;&#x7684;OutputStream&#x5BF9;&#x8C61;&#x662F;&#x8F93;&#x5165;&#x7684;&#x538B;&#x7F29;&#x540E;&#x7248;&#x672C;&#x3002;&#xFF08;&#x89C1;Example 3-9&#xFF09;</p>
+<p><img src="CHAPTER%203%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/3AC1D462-0723-4581-ACDF-7922AD491226.png" alt="">
+<em>Figure 3-2 &#x7B56;&#x7565;&#x6A21;&#x5F0F;</em></p>
+<p><em>Example 3-9 &#x5B9A;&#x4E49;&#x538B;&#x7F29;&#x6570;&#x636E;&#x7528;&#x7684;&#x7B56;&#x7565;&#x63A5;&#x53E3;</em></p>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">CompressionStrategy</span> </span>{
+    <span class="hljs-function">OutputStream <span class="hljs-title">compress</span><span class="hljs-params">(OutputStream data)</span> <span class="hljs-keyword">throws</span> IOException</span>;
+}
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x6709;&#x8BE5;&#x63A5;&#x53E3;&#x7684;&#x4E24;&#x79CD;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#xFF0C;&#x4E00;&#x79CD;&#x662F;gzip&#xFF0C;&#x4E00;&#x79CD;&#x662F;zip&#xFF0C;&#x4F7F;&#x7528;&#x5185;&#x5EFA;&#x7684;Java&#x7C7B;&#x6765;&#x7F16;&#x5199;gzip&#xFF08;Example 3-10&#xFF09;&#x548C;zip&#xFF08;Example 3-11&#xFF09;&#x6587;&#x4EF6;&#x3002;</p>
+<p><em>Example 3-10. &#x4F7F;&#x7528;gzip&#x7B97;&#x6CD5;&#x6765;&#x538B;&#x7F29;&#x6570;&#x636E;</em></p>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GzipCompressionStrategy</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">CompressionStrategy</span> </span>{
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> OutputStream <span class="hljs-title">compress</span><span class="hljs-params">(OutputStream data)</span> <span class="hljs-keyword">throws</span> IOException </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> GZIPOutputStream(data);
+    }
+}
+</code></pre>
+<p><em>Example 3-11. &#x4F7F;&#x7528;zip&#x7B97;&#x6CD5;&#x6765;&#x538B;&#x7F29;&#x6570;&#x636E;</em></p>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ZipCompressionStrategy</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">CompressionStrategy</span> </span>{
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> OutputStream <span class="hljs-title">compress</span><span class="hljs-params">(OutputStream data)</span> <span class="hljs-keyword">throws</span> IOException </span>{
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ZipOutputStream(data);
+    }
+}
+</code></pre>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x4F5C;&#x4E3A;&#x7B56;&#x7565;&#x6A21;&#x5F0F;&#x4E2D;<em>context</em>&#x90E8;&#x5206;&#x7684;<strong>Compressor</strong>&#x7C7B;&#x4E86;&#x3002;&#x5B83;&#x6709;&#x4E00;&#x4E2A;compress&#x65B9;&#x6CD5;&#xFF0C;&#x80FD;&#x63A5;&#x6536;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x5C06;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x7684;&#x538B;&#x7F29;&#x7248;&#x672C;&#x5199;&#x5165;&#x5230;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x4E2D;&#x3002;&#x5B83;&#x63A5;&#x6536;<strong>CompressionStrategy</strong>&#x7C7B;&#x578B;&#x7684;&#x5B9E;&#x4F8B;&#x4F5C;&#x4E3A;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x9009;&#x62E9;&#x4F7F;&#x7528;&#x54EA;&#x79CD;&#x538B;&#x7F29;&#x7B56;&#x7565;&#x5E76;&#x8C03;&#x7528;&#x8BE5;&#x53C2;&#x6570;&#x2014;&#x2014;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x83B7;&#x5F97;&#x5C06;&#x51FA;&#x51B3;&#x5B9A;&#x7684;&#x7528;&#x6237;&#x8F93;&#x5165;&#xFF08;&#x89C1; Example 3-12&#xFF09;&#x3002;</p>
+<p>Example 3-12. &#x5728;&#x6784;&#x9020;&#x538B;&#x7F29;&#x5668;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x538B;&#x7F29;&#x7B56;&#x7565;</p>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Compressor</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> CompressionStrategy strategy;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Compressor</span><span class="hljs-params">(CompressionStrategy strategy)</span> </span>{
+        <span class="hljs-keyword">this</span>.strategy =     strategy;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">compress</span><span class="hljs-params">(Path inFile, File outFile)</span> <span class="hljs-keyword">throws</span> IOException </span>{
+        <span class="hljs-keyword">try</span> (OutputStream outStream = <span class="hljs-keyword">new</span> FileOutputStream(outFile)) {
+            Files.copy(inFile, strategy.compress(outStream));
+            }
+        }
+}
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x6709;&#x7B56;&#x7565;&#x6A21;&#x5F0F;&#x7684;&#x4F20;&#x7EDF;&#x5B9E;&#x73B0;&#xFF0C;&#x7136;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x7F16;&#x5199;&#x5BA2;&#x6237;&#x7AEF;&#x4EE3;&#x7801;&#xFF0C;&#x5B83;&#x80FD;&#x6839;&#x636E;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x7B56;&#x7565;&#x521B;&#x5EFA;&#x65B0;Compressor&#x3002;&#xFF08;&#x89C1;Example 3-13&#xFF09;&#x3002;</p>
+<p>Example 3-13. Instantiating the Compressor using concrete strategy classes</p>
+<pre><code class="lang-java">Compressor gzipCompressor =
+    <span class="hljs-keyword">new</span> Compressor(<span class="hljs-keyword">new</span> GzipCompressionStrategy());
+gzipCompressor.compress(inFile, outFile);
+Compressor zipCompressor = <span class="hljs-keyword">new</span> Compressor(<span class="hljs-keyword">new</span> ZipCompressionStrategy());
+zipCompressor.compress(inFile, outFile);
+</code></pre>
+<p>&#x4E0E;&#x5148;&#x524D;&#x8BA8;&#x8BBA;&#x7684;&#x547D;&#x4EE4;&#x6A21;&#x5F0F;&#x76F8;&#x540C;&#xFF0C;&#x4F7F;&#x7528;lambda&#x6216;&#x8005;&#x65B9;&#x6CD5;&#x5F15;&#x7528;&#x53EF;&#x4EE5;&#x7701;&#x5374;&#x8BE5;&#x6A21;&#x5F0F;&#x4E2D;&#x7684;&#x6574;&#x4E2A;&#x6A21;&#x7248;&#x4EE3;&#x7801;&#x5C42;&#x3002;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5220;&#x53BB;&#x6BCF;&#x4E2A;&#x7B56;&#x7565;&#x7684;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x5E76;&#x6307;&#x5411;&#x663E;&#x793A;&#x8BE5;&#x7B97;&#x6CD5;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x91CC;&#x7684;&#x7B97;&#x6CD5;&#x7531;&#x76F8;&#x5173;&#x7684; OutputStream &#x5B9E;&#x73B0;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x8868;&#x793A;&#x3002;&#x5F53;&#x91C7;&#x53D6;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6452;&#x5F03;&#x6389;GzipCompressionStrategy&#x548C;ZipCompressionStrategy&#x7C7B;&#x3002;Example 3-14 &#x5C31;&#x662F;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x5F15;&#x7528;&#x540E;&#x4EE3;&#x7801;&#x7684;&#x6837;&#x5B50;&#x3002;</p>
+<p>Example 3-14.&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x5F15;&#x7528;&#x4EE3;&#x66FF;Compressor</p>
+<pre><code class="lang-java">Compressor gzipCompressor = <span class="hljs-keyword">new</span> Compressor(GZIPOutputStream::<span class="hljs-keyword">new</span>);
+gzipCompressor.compress(inFile, outFile);
+Compressor zipCompressor = <span class="hljs-keyword">new</span> Compressor(ZipOutputStream::<span class="hljs-keyword">new</span>);
+zipCompressor.compress(inFile, outFile);
+</code></pre>
+<p>&#x518D;&#x7528;&#x66F4;&#x52A0;&#x51FD;&#x6570;&#x7684;&#x65B9;&#x5F0F;&#x601D;&#x8003;&#x2014;&#x2014;&#x6839;&#x636E;&#x51FD;&#x6570;&#x800C;&#x4E0D;&#x662F;&#x7C7B;&#x548C;&#x5BF9;&#x8C61;&#x5EFA;&#x6A21;&#x2014;&#x2014;&#x80FD;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x51CF;&#x5C11;&#x6A21;&#x7248;&#x5E76;&#x7B80;&#x5316;&#x5DF2;&#x6709;&#x7684;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x3002;&#x80FD;&#x591F;&#x7EC4;&#x5408;&#x51FD;&#x6570;&#x5F0F;&#x548C;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x4E16;&#x754C;&#x89C2;&#x662F;&#x4E00;&#x6B21;&#x4F1F;&#x5927;&#x7684;&#x80DC;&#x5229;&#xFF1A;&#x4F60;&#x53EF;&#x4EE5;&#x9488;&#x5BF9;&#x4E0D;&#x540C;&#x7684;&#x60C5;&#x51B5;&#x9009;&#x62E9;&#x9002;&#x5F53;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x3002;</p>
 
                                 
                                 </section>
@@ -533,7 +590,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"策略模式","level":"1.5.3","depth":2,"next":{"title":"总结","level":"1.5.4","depth":2,"path":"chapter3/section3.4.md","ref":"chapter3/section3.4.md","articles":[]},"previous":{"title":"命令模式","level":"1.5.2","depth":2,"path":"chapter3/section3.2.md","ref":"chapter3/section3.2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/section3.3.md","mtime":"2017-03-28T07:21:05.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-28T07:34:08.253Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"策略模式","level":"1.5.3","depth":2,"next":{"title":"总结","level":"1.5.4","depth":2,"path":"chapter3/section3.4.md","ref":"chapter3/section3.4.md","articles":[]},"previous":{"title":"命令模式","level":"1.5.2","depth":2,"path":"chapter3/section3.2.md","ref":"chapter3/section3.2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/section3.3.md","mtime":"2017-03-28T10:53:49.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-28T07:34:08.253Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
